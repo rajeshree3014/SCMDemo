@@ -1,0 +1,35 @@
+﻿@model MyDemoWebApplication.Models.UserViewModel
+
+@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div>
+    <h3>Login Page</h3>
+    @ViewBag.error
+    <form method="post" action="@Url.Action("DoLogin", "Login")">
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true)
+        <table border="0" cellpadding="2" cellspacing="2">
+            <tr>
+                <td>
+                    @Html.TextBoxFor(model => model.UserName, new { @placeholder = "UserName" })
+
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.UserName)</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(model => model.Password, new { @placeholder = "********", @type = "Password" })
+
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.Password)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+</div>

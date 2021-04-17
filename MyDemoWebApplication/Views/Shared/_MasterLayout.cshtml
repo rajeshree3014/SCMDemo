@@ -1,0 +1,39 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>MyDemo Application</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+    <header class="navbar navbar-light py-3 pb-4 px-0">
+        <div class="container px-0">
+            <div class="row w-100">
+                <div class="col-lg-1 col-md-auto col-sm-auto">
+                    
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-8 float-md-right top-menu-col">
+                </div>
+                <div class="col-lg-5 col-md notification-content p-md-0">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content px-lg-3 px-0">
+        @RenderBody()
+    </div>
+   
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
